@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+ xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+<cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+<cbc:CustomizationID>TR1.2</cbc:CustomizationID>
+<cbc:ProfileID>TICARIFATURA</cbc:ProfileID>
+<cbc:ID>ABC2026000000002</cbc:ID>
+<cbc:CopyIndicator>false</cbc:CopyIndicator>
+<cbc:UUID>2b1e0c4a-1111-4c2e-9b7a-000000000002</cbc:UUID>
+<cbc:IssueDate>2026-10-15</cbc:IssueDate>
+<cbc:InvoiceTypeCode>SATIS</cbc:InvoiceTypeCode>
+<cbc:DocumentCurrencyCode>TRY</cbc:DocumentCurrencyCode>
+<cac:AccountingSupplierParty><cac:Party>
+<cac:PartyIdentification><cbc:ID schemeID="VKN">1234567890</cbc:ID></cac:PartyIdentification>
+<cac:PartyName><cbc:Name>Örnek Yazılım A.Ş.</cbc:Name></cac:PartyName>
+</cac:Party></cac:AccountingSupplierParty>
+<cac:AccountingCustomerParty><cac:Party>
+<cac:PartyIdentification><cbc:ID schemeID="TCKN">10000000146</cbc:ID></cac:PartyIdentification>
+<cac:Person><cbc:FirstName>Ayşe</cbc:FirstName><cbc:FamilyName>Yılmaz</cbc:FamilyName></cac:Person>
+</cac:Party></cac:AccountingCustomerParty>
+<cac:TaxTotal><cbc:TaxAmount currencyID="TRY">150.00</cbc:TaxAmount><cac:TaxSubtotal><cbc:TaxableAmount currencyID="TRY">500.00</cbc:TaxableAmount><cbc:TaxAmount currencyID="TRY">100.00</cbc:TaxAmount><cbc:Percent>20</cbc:Percent><cac:TaxCategory><cac:TaxScheme><cbc:Name>KDV</cbc:Name><cbc:TaxTypeCode>0015</cbc:TaxTypeCode></cac:TaxScheme></cac:TaxCategory></cac:TaxSubtotal><cac:TaxSubtotal><cbc:TaxableAmount currencyID="TRY">500.00</cbc:TaxableAmount><cbc:TaxAmount currencyID="TRY">50.00</cbc:TaxAmount><cbc:Percent>10</cbc:Percent><cac:TaxCategory><cac:TaxScheme><cbc:Name>KDV</cbc:Name><cbc:TaxTypeCode>0015</cbc:TaxTypeCode></cac:TaxScheme></cac:TaxCategory></cac:TaxSubtotal></cac:TaxTotal>
+
+<cac:LegalMonetaryTotal>
+<cbc:LineExtensionAmount currencyID="TRY">1000.00</cbc:LineExtensionAmount>
+<cbc:TaxExclusiveAmount currencyID="TRY">1000.00</cbc:TaxExclusiveAmount>
+<cbc:TaxInclusiveAmount currencyID="TRY">1150.00</cbc:TaxInclusiveAmount>
+<cbc:AllowanceTotalAmount currencyID="TRY">0.00</cbc:AllowanceTotalAmount>
+<cbc:PayableAmount currencyID="TRY">1150.00</cbc:PayableAmount>
+</cac:LegalMonetaryTotal>
+</Invoice>
