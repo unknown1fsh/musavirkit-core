@@ -1,6 +1,6 @@
 import pytest
 
-from faturakit.tax_ids import is_valid_tax_id, is_valid_tckn, is_valid_vkn
+from musavirkit_core.tax_ids import is_valid_tax_id, is_valid_tckn, is_valid_vkn
 
 
 def test_valid_vkn():

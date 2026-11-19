@@ -13,8 +13,8 @@ from openpyxl.styles import Font, PatternFill
 from openpyxl.utils import get_column_letter
 from openpyxl.worksheet.worksheet import Worksheet
 
-from faturakit.models import ZERO, Invoice, Issue, Severity
-from faturakit.validation import DUPLICATE_CHECK
+from musavirkit_core.models import ZERO, Invoice, Issue, Severity
+from musavirkit_core.validation import DUPLICATE_CHECK
 
 MONEY_FORMAT = "#,##0.00"
 DATE_FORMAT = "DD.MM.YYYY"

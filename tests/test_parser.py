@@ -4,7 +4,7 @@ from decimal import Decimal
 import pytest
 from ubl_builder import Spec, Sub, build
 
-from faturakit.parser import InvoiceParseError, parse_invoice
+from musavirkit_core.parser import InvoiceParseError, parse_invoice
 
 
 def test_parses_header_fields():

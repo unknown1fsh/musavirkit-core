@@ -13,7 +13,7 @@ from xml.etree.ElementTree import Element, ParseError
 from defusedxml import DefusedXmlException
 from defusedxml.ElementTree import fromstring
 
-from faturakit.models import ZERO, Invoice, Party, TaxSubtotal
+from musavirkit_core.models import ZERO, Invoice, Party, TaxSubtotal
 
 INVOICE_NS = "urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
 NS = {

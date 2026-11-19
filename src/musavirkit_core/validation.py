@@ -6,8 +6,8 @@ import re
 from collections.abc import Callable, Iterable
 from decimal import Decimal
 
-from faturakit.models import Invoice, Issue, Party, Severity
-from faturakit.tax_ids import is_valid_tax_id
+from musavirkit_core.models import Invoice, Issue, Party, Severity
+from musavirkit_core.tax_ids import is_valid_tax_id
 
 DEFAULT_TOLERANCE = Decimal("0.02")
 DUPLICATE_CHECK = "MUKERRER"

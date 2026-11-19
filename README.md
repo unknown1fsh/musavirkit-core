@@ -1,8 +1,8 @@
-# FaturaKit
+# MüşavirKit Core
 
 **e-Fatura ve e-Arşiv (UBL-TR) XML dosyalarını saniyeler içinde kontrol edip Excel'e aktaran, tamamen bilgisayarınızda çalışan araç.**
 
-Mali müşavirler ve muhasebe ekipleri için yapıldı. Faturalar hiçbir sunucuya gönderilmez, internet gerekmez.
+[MüşavirKit](https://musavirkit.com)'in açık kaynak fatura motoru; mali müşavirler ve muhasebe ekipleri için yapıldı. Faturalar hiçbir sunucuya gönderilmez, internet gerekmez.
 
 ## Ne yapar?
 
@@ -40,13 +40,13 @@ python -m venv .venv
 ## Kullanım
 
 ```powershell
-.\.venv\Scripts\faturakit D:\Faturalar\2026-10 -o ekim.xlsx --vkn 1234567890 --donem 2026-10
+.\.venv\Scripts\musavirkit-core D:\Faturalar\2026-10 -o ekim.xlsx --vkn 1234567890 --donem 2026-10
 ```
 
 Birden fazla girdi verilebilir (dosya, klasör, ZIP karışık):
 
 ```powershell
-.\.venv\Scripts\faturakit gelen.zip giden\ ek-fatura.xml -o rapor.xlsx
+.\.venv\Scripts\musavirkit-core gelen.zip giden\ ek-fatura.xml -o rapor.xlsx
 ```
 
 Çıkış kodları: `0` sorun yok, `1` en az bir HATA bulundu, `2` hatalı parametre veya dosya yazılamadı.
@@ -55,7 +55,7 @@ Birden fazla girdi verilebilir (dosya, klasör, ZIP karışık):
 
 ```powershell
 .\.venv\Scripts\python examples\make_examples.py
-.\.venv\Scripts\faturakit examples\ornek-faturalar -o demo.xlsx --vkn 1234567890 --donem 2026-10
+.\.venv\Scripts\musavirkit-core examples\ornek-faturalar -o demo.xlsx --vkn 1234567890 --donem 2026-10
 ```
 
 Örneklerde bir hatalı KDV ve bir mükerrer fatura bulunur; ikisi de Kontroller sayfasında görünür.
@@ -63,9 +63,9 @@ Birden fazla girdi verilebilir (dosya, klasör, ZIP karışık):
 ## Python kütüphanesi olarak
 
 ```python
-from faturakit.loader import load_invoices
-from faturakit.validation import validate
-from faturakit.exporter import export_excel
+from musavirkit_core.loader import load_invoices
+from musavirkit_core.validation import validate
+from musavirkit_core.exporter import export_excel
 
 invoices, issues = load_invoices(["D:/Faturalar"])
 issues += validate(invoices, period="2026-10")
@@ -85,13 +85,9 @@ export_excel(invoices, issues, "rapor.xlsx", own_tax_id="1234567890")
 .\.venv\Scripts\python -m pytest
 ```
 
-## Yol haritası
+## MüşavirKit
 
-- [ ] Banka ekstresi (Excel/CSV) ile otomatik mutabakat
-- [ ] Masaüstü arayüz (sürükle-bırak)
-- [ ] Muhasebe programları için içe aktarma şablonları
-- [ ] Fatura satırları (mal/hizmet kalemleri) sayfası
-- [ ] Windows kurulum paketi ve GitHub Release otomasyonu
+Banka mutabakatı, masaüstü arayüz, mükellef yönetimi ve lisanslı güncellemeler [MüşavirKit](https://musavirkit.com) masaüstü uygulamasındadır; bu repo onun herkese açık çekirdeğidir.
 
 ## Lisans
 

@@ -3,9 +3,9 @@ from decimal import Decimal
 from openpyxl import load_workbook
 from ubl_builder import Spec, Sub, build
 
-from faturakit.exporter import export_excel
-from faturakit.parser import parse_invoice
-from faturakit.validation import validate
+from musavirkit_core.exporter import export_excel
+from musavirkit_core.parser import parse_invoice
+from musavirkit_core.validation import validate
 
 
 def _rows(ws):

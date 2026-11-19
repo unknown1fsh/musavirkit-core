@@ -3,7 +3,7 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "faturakit"
+name = "musavirkit-core"
 version = "0.1.0"
 description = "e-Fatura / e-Arşiv (UBL-TR) XML dosyalarını Excel'e dönüştüren ve kontrol eden yerel araç"
 readme = "README.md"
@@ -18,7 +18,7 @@ dependencies = [
 dev = ["pytest>=8"]
 
 [project.scripts]
-faturakit = "faturakit.cli:main"
+musavirkit-core = "musavirkit_core.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

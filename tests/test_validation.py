@@ -2,9 +2,9 @@ from decimal import Decimal
 
 from ubl_builder import Spec, Sub, build
 
-from faturakit.models import Severity
-from faturakit.parser import parse_invoice
-from faturakit.validation import validate
+from musavirkit_core.models import Severity
+from musavirkit_core.parser import parse_invoice
+from musavirkit_core.validation import validate
 
 
 def _inv(source="a.xml", **kw):

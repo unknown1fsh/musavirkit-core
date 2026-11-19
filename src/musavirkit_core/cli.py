@@ -1,4 +1,4 @@
-"""Komut satırı: faturakit <dosya/klasör/zip ...> -o rapor.xlsx [--vkn ...] [--donem YYYY-AA]"""
+"""Komut satırı: musavirkit-core <dosya/klasör/zip ...> -o rapor.xlsx [--vkn ...] [--donem YYYY-AA]"""
 
 from __future__ import annotations
 
@@ -7,18 +7,18 @@ import sys
 from collections.abc import Sequence
 from decimal import Decimal, InvalidOperation
 
-from faturakit import __version__
-from faturakit.exporter import export_excel
-from faturakit.loader import load_invoices
-from faturakit.models import Severity
-from faturakit.validation import DEFAULT_TOLERANCE, is_valid_period, validate
+from musavirkit_core import __version__
+from musavirkit_core.exporter import export_excel
+from musavirkit_core.loader import load_invoices
+from musavirkit_core.models import Severity
+from musavirkit_core.validation import DEFAULT_TOLERANCE, is_valid_period, validate
 
 EXIT_OK, EXIT_ISSUES, EXIT_USAGE = 0, 1, 2
 
 
 def _build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
-        prog="faturakit",
+        prog="musavirkit-core",
         description="e-Fatura / e-Arşiv XML dosyalarını kontrol edip Excel'e aktarır.",
     )
     p.add_argument("girdiler", nargs="+", help="XML dosyası, ZIP arşivi veya klasör")

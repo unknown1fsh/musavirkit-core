@@ -2,7 +2,7 @@ import zipfile
 
 from ubl_builder import build
 
-from faturakit.loader import load_invoices
+from musavirkit_core.loader import load_invoices
 
 
 def test_loads_folder_recursively_and_zip(tmp_path):

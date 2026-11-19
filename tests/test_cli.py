@@ -1,7 +1,7 @@
 from openpyxl import load_workbook
 from ubl_builder import build
 
-from faturakit.cli import main
+from musavirkit_core.cli import main
 
 
 def test_cli_converts_folder(tmp_path, capsys):

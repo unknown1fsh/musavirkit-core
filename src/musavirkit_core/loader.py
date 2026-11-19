@@ -9,8 +9,8 @@ import zipfile
 from collections.abc import Callable, Iterable, Iterator
 from pathlib import Path
 
-from faturakit.models import Invoice, Issue, Severity
-from faturakit.parser import InvoiceParseError, parse_invoice
+from musavirkit_core.models import Invoice, Issue, Severity
+from musavirkit_core.parser import InvoiceParseError, parse_invoice
 
 Source = tuple[str, Callable[[], bytes]]
 MAX_XML_BYTES = 50 * 1024 * 1024  # tek fatura için makul üst sınır (zip bombasına karşı)
